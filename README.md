@@ -78,7 +78,7 @@ Anchored in **AI Document Intelligence** and direct **Government API integration
 
 ## 🏗️ Repository Structure
 
-`	ext
+```text
 PS100_SIH/
 ├── backend/
 │   ├── app/
@@ -108,7 +108,7 @@ PS100_SIH/
 │   └── tailwind.config.js     # Tailwind utility class configurations
 ├── docker-compose.yml         # Full-stack container orchestration for isolated deployment
 └── README.md                  # Project overview, architecture, and instructions
-`
+```
 
 ---
 
