@@ -10,9 +10,11 @@
 | Parameter | Specification |
 | :--- | :--- |
 | **Problem Statement ID** | `26100` |
-| **Problem Statement Title** | **AI-Powered SmartBid Verification for GeM Procurement** |
-| **Theme** | **Smart Automation & E-Governance** |
-| **PS Category** | **Software** |
+| **Problem Statement Title** | **AI-Powered Integrated Bid Compliance Verification Platform for GeM Procurement** |
+| **Organization** | **Ministry of Petroleum & Natural Gas** |
+| **Department** | **Chennai Petroleum Corporation Limited (CPCL)** |
+| **Category** | **Software** |
+| **Theme** | **Smart Automation** |
 | **Team ID** | `120765` |
 | **Team Name** | **ARTARS** |
 
