@@ -65,7 +65,7 @@ const DecisionPanel = ({
             <span>Procurement Officer Qualification Judgment Panel</span>
           </h3>
           <p className="text-xs text-slate-500 mt-0.5">
-            Formal administrative decision under General Financial Rules (GFR) 2017 & GeM Terms.
+            Formal administrative decision under General Financial Rules (GFR) 2017 & SmartBid Terms.
           </p>
         </div>
 
@@ -163,7 +163,7 @@ const DecisionPanel = ({
         <div className="pt-2 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
           <div className="text-[11px] text-slate-500 flex items-center gap-1.5">
             <Lock className="w-3.5 h-3.5 text-slate-400" />
-            <span>Decision commits an immutable tamper-proof entry to the GeM Audit Vault.</span>
+            <span>Decision commits an immutable tamper-proof entry to the SmartBid Audit Vault.</span>
           </div>
 
           <div className="flex items-center gap-2.5">
@@ -242,7 +242,7 @@ const DecisionPanel = ({
           <div className="text-[11px] text-slate-500 bg-amber-50 border border-amber-200 p-2.5 rounded-lg flex items-start gap-2">
             <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
             <span>
-              <strong>Statutory Warning:</strong> Once committed, this administrative determination is permanently recorded under GFR Rule 173 and will trigger notifications to the GeM Evaluation Directorate.
+              <strong>Statutory Warning:</strong> Once committed, this administrative determination is permanently recorded under GFR Rule 173 and will trigger notifications to the SmartBid Evaluation Directorate.
             </span>
           </div>
 

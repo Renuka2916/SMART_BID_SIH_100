@@ -200,7 +200,7 @@ def get_simulated_blacklisting_response(company_name: str, pan: Optional[str]) -
     is_flagged = "NETSECURE" in company_name.upper()
     return {
         "status": "CLEARED" if not is_flagged else "FLAGGED",
-        "portal": "CPPP Debarment, GeM Watchlist & CVC Vigilance Portal",
+        "portal": "CPPP Debarment, SmartBid Watchlist & CVC Vigilance Portal",
         "data": {
             "query_company": company_name,
             "query_pan": pan or "ABCDE1234F",
@@ -306,7 +306,7 @@ def get_simulated_gem_incident_response(company_name: str) -> Dict[str, Any]:
     is_netsecure = "NETSECURE" in company_name.upper()
     return {
         "status": "CLEARED" if not is_netsecure else "ADVISORY",
-        "portal": "GeM Incident Management & Seller Rating System",
+        "portal": "SmartBid Incident Management & Seller Rating System",
         "data": {
             "seller_name": company_name,
             "overall_seller_rating": 4.8 if not is_netsecure else 3.6,

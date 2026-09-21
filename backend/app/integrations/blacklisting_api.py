@@ -11,7 +11,7 @@ from app.mock_data.simulated_responses import get_simulated_blacklisting_respons
 
 class BlacklistingFetcher(BasePortalFetcher):
     portal_id = "NON_BLACKLIST"
-    portal_name = "CPPP Debarment, GeM Watchlist & Vigilance Registry"
+    portal_name = "CPPP Debarment, SmartBid Watchlist & Vigilance Registry"
     category = "Integrity & Debarment"
     api_endpoint = "https://eprocure.gov.in/cppp/debarment-api"
 

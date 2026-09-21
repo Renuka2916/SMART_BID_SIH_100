@@ -1,5 +1,5 @@
 # ==============================================================================
-# GeM Bid Compliance Platform - Backend API Service Dockerfile
+# SmartBid Verification - Backend API Service Dockerfile
 # Smart India Hackathon (SIH PS100)
 # ==============================================================================
 FROM python:3.12-slim AS base

@@ -130,7 +130,7 @@ const ActiveBidsPage = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
             <h2 className="text-xl font-black text-slate-900 tracking-tight">Active Bid Submissions</h2>
@@ -143,12 +143,12 @@ const ActiveBidsPage = () => {
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2 justify-start lg:justify-end">
           <Button
             variant="outline"
             icon={Plus}
             onClick={() => setIsSubmitOpen(true)}
-            className="text-xs font-bold text-blue-900 border-blue-300 hover:bg-blue-50"
+            className="text-xs font-bold text-blue-900 border-blue-300 hover:bg-blue-50 whitespace-nowrap"
           >
             Submit New Bid Application
           </Button>
@@ -157,7 +157,7 @@ const ActiveBidsPage = () => {
             variant="primary"
             icon={Cpu}
             onClick={() => navigate('/verification')}
-            className="bg-blue-900 hover:bg-blue-950 font-bold text-xs"
+            className="bg-blue-900 hover:bg-blue-950 font-bold text-xs whitespace-nowrap"
           >
             Verification Workspace
           </Button>
@@ -320,7 +320,7 @@ const ActiveBidsPage = () => {
 
           <div>
             <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-              Select Target GeM Tender *
+              Select Target SmartBid Tender *
             </label>
             <select
               required

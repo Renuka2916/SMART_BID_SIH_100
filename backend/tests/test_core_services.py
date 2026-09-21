@@ -34,7 +34,7 @@ def db_session():
 def officer_token():
     resp = client.post(
         "/api/auth/login",
-        json={"email": "officer@gem.gov.in", "password": "GeM@2026!Officer"}
+        json={"email": "officer@smartbid.gov.in", "password": "SmartBid@2026!Officer"}
     )
     assert resp.status_code == 200
     return resp.json()["access_token"]
@@ -87,7 +87,7 @@ def test_masking_functions():
 
 def test_create_bidder_and_verify_encrypted_pii(officer_token, db_session):
     # Find active tender
-    tender = db_session.query(Tender).filter(Tender.tender_ref == "GEM/2026/B/1049281").first()
+    tender = db_session.query(Tender).filter(Tender.tender_ref == "SMARTBID/2026/B/1049281").first()
     assert tender is not None
 
     pan = "TSTNP9999R"
@@ -142,7 +142,7 @@ def test_create_bidder_and_verify_encrypted_pii(officer_token, db_session):
         assert req in check_keys
 
 def test_duplicate_bidder_pan_rejection(officer_token, db_session):
-    tender = db_session.query(Tender).filter(Tender.tender_ref == "GEM/2026/B/1049281").first()
+    tender = db_session.query(Tender).filter(Tender.tender_ref == "SMARTBID/2026/B/1049281").first()
     assert tender is not None
 
     duplicate_pan = "KLMNP5432R"

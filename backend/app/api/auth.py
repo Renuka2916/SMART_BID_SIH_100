@@ -86,7 +86,7 @@ def login(login_data: UserLogin, db: Session = Depends(get_db)):
     if not user.is_active:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
-            detail="User account is deactivated. Contact GeM administrator."
+            detail="User account is deactivated. Contact SmartBid administrator."
         )
 
     # Issue JWT token
@@ -128,7 +128,7 @@ def register_user(user_in: UserCreate, db: Session = Depends(get_db)):
         full_name=user_in.full_name,
         hashed_password=get_password_hash(user_in.password),
         role_id=role.id,
-        department=user_in.department or "GeM Procurement Division",
+        department=user_in.department or "SmartBid Procurement Division",
         is_active=True
     )
     db.add(user)

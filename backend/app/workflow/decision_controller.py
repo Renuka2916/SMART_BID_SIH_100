@@ -34,7 +34,7 @@ class DecisionSubmissionPayload(BaseModel):
 def validate_ai_safety_gate(user: Optional[User]) -> None:
     """
     AI Safety Gate:
-    Under GFR Rule 173 and GeM Procurement Guidelines, AI recommendations are strictly advisory.
+    Under GFR Rule 173 and SmartBid Procurement Guidelines, AI recommendations are strictly advisory.
     No automated algorithm or non-authenticated background process may qualify or disqualify a bidder.
     A certified human Procurement Officer or Admin must review and sign the determination.
     """

@@ -15,19 +15,19 @@ def test_health_check():
 def test_login_success():
     response = client.post(
         "/api/auth/login",
-        json={"email": "officer@gem.gov.in", "password": "GeM@2026!Officer"}
+        json={"email": "officer@smartbid.gov.in", "password": "SmartBid@2026!Officer"}
     )
     assert response.status_code == 200
     data = response.json()
     assert "access_token" in data
     assert data["token_type"] == "bearer"
-    assert data["user"]["email"] == "officer@gem.gov.in"
+    assert data["user"]["email"] == "officer@smartbid.gov.in"
     assert data["user"]["role"]["name"] == "Procurement Officer"
 
 def test_login_invalid_password():
     response = client.post(
         "/api/auth/login",
-        json={"email": "officer@gem.gov.in", "password": "WrongPassword123!"}
+        json={"email": "officer@smartbid.gov.in", "password": "WrongPassword123!"}
     )
     assert response.status_code == 401
     assert "Invalid email or password" in response.json()["detail"]
@@ -43,7 +43,7 @@ def test_get_current_user_profile():
     # Login first
     login_resp = client.post(
         "/api/auth/login",
-        json={"email": "officer@gem.gov.in", "password": "GeM@2026!Officer"}
+        json={"email": "officer@smartbid.gov.in", "password": "SmartBid@2026!Officer"}
     )
     token = login_resp.json()["access_token"]
 
@@ -54,7 +54,7 @@ def test_get_current_user_profile():
     )
     assert me_resp.status_code == 200
     user_data = me_resp.json()
-    assert user_data["email"] == "officer@gem.gov.in"
+    assert user_data["email"] == "officer@smartbid.gov.in"
     assert user_data["role"]["name"] == "Procurement Officer"
 
 def test_get_current_user_profile_unauthorized():

@@ -63,7 +63,7 @@ class RiskClassifier:
             if score < 80.0:
                 risk_factors.append(f"[MODERATE_SCORE] Compliance score ({score}%) requires officer review.")
 
-            mitigation_actions.append("Seek official clarification through GeM representation window with 48h deadline.")
+            mitigation_actions.append("Seek official clarification through SmartBid representation window with 48h deadline.")
             mitigation_actions.append("Request notarized original statutory certificates and CA UDIN confirmation.")
 
         else:

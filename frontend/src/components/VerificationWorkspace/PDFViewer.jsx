@@ -179,7 +179,7 @@ const PDFViewer = ({
             {/* Watermark Pattern */}
             <div className="absolute inset-0 pointer-events-none opacity-[0.03] flex items-center justify-center select-none overflow-hidden">
               <div className="text-7xl font-serif font-black tracking-widest text-slate-900 rotate-[-30deg]">
-                GOVERNMENT OF INDIA • GeM VERIFIED
+                GOVERNMENT OF INDIA • SmartBid VERIFIED
               </div>
             </div>
 
@@ -187,7 +187,7 @@ const PDFViewer = ({
             <div className="border-b-2 border-slate-800 pb-4 mb-6 text-center relative">
               <div className="flex justify-between items-start">
                 <div className="text-left text-[10px] text-slate-500 font-mono">
-                  <div>DOC REF: GeM-VER-2026-X09</div>
+                  <div>DOC REF: SmartBid Verification 2026-X09</div>
                   <div>SECURE SHA-256 VAULT VERIFIED</div>
                 </div>
                 {/* National Emblem Ashoka Pillar simulation */}
@@ -243,7 +243,7 @@ const PDFViewer = ({
                     Original Equipment Manufacturer (OEM) Direct Enterprise SLA Letter
                   </h2>
                   <p className="text-[11px] text-slate-500 italic mt-0.5">
-                    Tender Reference: GEM/2026/B/1049281 • Server & Compute Hardware
+                    Tender Reference: SMARTBID/2026/B/1049281 • Server & Compute Hardware
                   </p>
                 </div>
               )}
@@ -538,7 +538,7 @@ const PDFViewer = ({
 
             {/* Certificate Footer Notice */}
             <div className="mt-8 pt-3 border-t border-slate-200 text-[9px] text-slate-400 text-center font-mono">
-              VERIFIED UNDER GOVERNMENT E-MARKETPLACE (GeM) AUTOMATED STATUTORY INTEGRITY GATEWAY • 2026
+              VERIFIED UNDER GOVERNMENT E-MARKETPLACE (SmartBid) AUTOMATED STATUTORY INTEGRITY GATEWAY • 2026
             </div>
           </div>
         </div>

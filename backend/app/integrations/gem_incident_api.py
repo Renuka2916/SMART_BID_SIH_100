@@ -11,9 +11,9 @@ from app.mock_data.simulated_responses import get_simulated_gem_incident_respons
 
 class GemIncidentFetcher(BasePortalFetcher):
     portal_id = "GEM_INCIDENT"
-    portal_name = "GeM Incident Management & Seller Rating System"
+    portal_name = "SmartBid Incident Management & Seller Rating System"
     category = "Platform Integrity & History"
-    api_endpoint = "https://incident.gem.gov.in/api/v1/seller-standing"
+    api_endpoint = "https://incident.smartbid.gov.in/api/v1/seller-standing"
 
     async def fetch_data(self, identifiers: BidderIdentifiers) -> NormalizedPortalResponse:
         start_t = time.time()
@@ -27,7 +27,7 @@ class GemIncidentFetcher(BasePortalFetcher):
 
             discrepancies = []
             if open_incidents > 0:
-                discrepancies.append(f"Seller has {open_incidents} unresolved incident(s) on GeM marketplace.")
+                discrepancies.append(f"Seller has {open_incidents} unresolved incident(s) on SmartBid marketplace.")
             if rating < 4.0:
                 discrepancies.append(f"Seller rating ({rating}/5.0) is below standard threshold (4.0).")
 

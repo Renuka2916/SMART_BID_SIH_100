@@ -23,7 +23,7 @@ def record_audit_event(
     AI verification events, or officer determinations.
     """
     user_id = user.id if user else None
-    user_email = user.email if user else "system@gem.gov.in"
+    user_email = user.email if user else "system@smartbid.gov.in"
     user_role = user.role.name if (user and user.role) else "System Automation"
 
     log_entry = AuditLog(

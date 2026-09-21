@@ -55,10 +55,10 @@ def db():
 @pytest.fixture
 def procurement_officer(db: Session):
     officer_role = db.query(Role).filter(Role.name == "Procurement Officer").first()
-    officer = db.query(User).filter(User.email == "officer@gem.gov.in").first()
+    officer = db.query(User).filter(User.email == "officer@smartbid.gov.in").first()
     if not officer:
         officer = User(
-            email="officer@gem.gov.in",
+            email="officer@smartbid.gov.in",
             full_name="Rajesh Sharma",
             hashed_password="mock_password_hash",
             role_id=officer_role.id if officer_role else 1,
@@ -74,7 +74,7 @@ def test_bidder(db: Session, procurement_officer: User):
     tender = db.query(Tender).first()
     if not tender:
         tender = Tender(
-            tender_ref="GEM/2026/TEST/999",
+            tender_ref="SMARTBID/2026/TEST/999",
             title="Test Infrastructure Tender",
             description="Test Description",
             category="Goods",

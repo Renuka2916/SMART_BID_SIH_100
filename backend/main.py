@@ -26,7 +26,7 @@ app = FastAPI(
     version=settings.PROJECT_VERSION,
     description="""
 ## Smart India Hackathon (PS100)
-### AI-Powered Integrated Bid Compliance Verification Platform for GeM Procurement
+### AI-Powered SmartBid Verification Platform for SmartBid Procurement
 
 This backend provides:
 * **JWT Authentication & RBAC**: Enforcing the **'Procurement Officer'** role.
@@ -45,7 +45,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 
 class SecurityHeadersMiddleware(BaseHTTPMiddleware):
-    """Enforces strict Government-grade HTTP security headers for GeM procurement."""
+    """Enforces strict Government-grade HTTP security headers for SmartBid procurement."""
     async def dispatch(self, request: Request, call_next):
         response = await call_next(request)
         response.headers["X-Content-Type-Options"] = "nosniff"
@@ -98,4 +98,4 @@ def root():
 
 @app.get("/health", tags=["System"])
 def health_check():
-    return {"status": "healthy", "service": "GeM Bid Compliance Engine API"}
+    return {"status": "healthy", "service": "SmartBid Verification Engine API"}

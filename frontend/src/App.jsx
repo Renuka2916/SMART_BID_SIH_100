@@ -17,7 +17,7 @@ const ProtectedRoute = () => {
     return (
       <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center text-white gap-3">
         <div className="w-8 h-8 border-3 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-        <span className="text-xs font-mono text-slate-400">Authenticating GeM Session...</span>
+        <span className="text-xs font-mono text-slate-400">Authenticating SmartBid Session...</span>
       </div>
     );
   }

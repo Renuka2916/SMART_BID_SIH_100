@@ -14,7 +14,7 @@ class AIRecommendationGenerator:
     """
     AI Executive Summary & Recommendation Engine:
     Synthesizes rule outputs, discrepancy findings, and risk scores into
-    actionable natural language advisories for GeM Procurement Officers.
+    actionable natural language advisories for SmartBid Procurement Officers.
     """
 
     def generate_recommendation(
@@ -75,7 +75,7 @@ class AIRecommendationGenerator:
             )
 
             next_actions = [
-                "Issue formal technical disqualification record on the GeM portal with reference to statutory findings.",
+                "Issue formal technical disqualification record on the SmartBid portal with reference to statutory findings.",
                 "Exclude bidder from commercial bid opening.",
                 "Archive immutable audit verification record for CVO / Vigilance inspection."
             ]
@@ -91,7 +91,7 @@ class AIRecommendationGenerator:
             )
 
             next_actions = [
-                "Request clarification or updated documentation via the GeM Representation Window with a 48-hour deadline.",
+                "Request clarification or updated documentation via the SmartBid Representation Window with a 48-hour deadline.",
                 "Review flagged cross-verification discrepancies against physical / original documents.",
                 "Verify CA UDIN authenticity on the ICAI portal if financial turnover is in dispute."
             ]

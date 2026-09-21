@@ -76,7 +76,7 @@ class CrossVerificationEngine:
                         field_name="BLACKLISTING_STATUS",
                         severity="CRITICAL",
                         source_a=f"Bidder: {bidder_name} (PAN: {bidder_pan})",
-                        source_b="CPPP National Debarment / GeM Watchlist Registry",
+                        source_b="CPPP National Debarment / SmartBid Watchlist Registry",
                         description=f"Active statutory debarment order detected: {norm.get('debarment_reason', 'Listed on debarred suppliers list')}. Under GFR Rule 151, entity is prohibited from participating.",
                         disqualification_ground=True
                     ))
@@ -92,7 +92,7 @@ class CrossVerificationEngine:
                     severity="CRITICAL",
                     source_a=f"Bidder GSTIN: {bidder_gstin}",
                     source_b=f"GSTN Portal Status: {status}",
-                    description=f"Statutory taxation failure: GSTIN status is '{status}'. Active GST registration is mandatory under GeM General Terms.",
+                    description=f"Statutory taxation failure: GSTIN status is '{status}'. Active GST registration is mandatory under SmartBid General Terms.",
                     disqualification_ground=True
                 ))
             
@@ -244,7 +244,7 @@ class CrossVerificationEngine:
                     field_name="MISSING_SIGNATURE",
                     severity="MEDIUM",
                     source_a=f"Document: {getattr(doc, 'file_name', 'File')}",
-                    source_b="GeM Tender Terms (Signed & Stamped Mandatory)",
+                    source_b="SmartBid Tender Terms (Signed & Stamped Mandatory)",
                     description="Uploaded statutory document lacks visible authorized signatory signature or company seal.",
                     disqualification_ground=False
                 ))

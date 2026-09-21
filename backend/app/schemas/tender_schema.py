@@ -10,7 +10,7 @@ class StatutoryRequirementTemplate(BaseModel):
     is_recommended: bool = True
 
 class TenderBase(BaseModel):
-    tender_ref: str = Field(..., description="GeM Tender Reference Number, e.g. GEM/2026/B/89123")
+    tender_ref: str = Field(..., description="SmartBid Tender Reference Number, e.g. SMARTBID/2026/B/89123")
     title: str
     description: Optional[str] = None
     category: str = "Goods"  # Goods, Services, Works

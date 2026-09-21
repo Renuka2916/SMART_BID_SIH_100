@@ -18,7 +18,7 @@ from app.api.auth import get_current_user, require_procurement_officer
 
 router = APIRouter(prefix="/tenders", tags=["Tender Management"])
 
-# Standard Predefined GeM Statutory Requirements Template Catalog
+# Standard Predefined SmartBid Statutory Requirements Template Catalog
 STATUTORY_REQUIREMENTS_CATALOG: List[StatutoryRequirementTemplate] = [
     StatutoryRequirementTemplate(
         key="UDYAM",
@@ -87,7 +87,7 @@ STATUTORY_REQUIREMENTS_CATALOG: List[StatutoryRequirementTemplate] = [
         key="NON_BLACKLIST",
         name="Debarment & Non-Blacklisting Portal Cross-Check",
         category="Integrity & Statutory",
-        description="Cross-check bidder against CPPP/GeM debarment lists, central vigilance database, and state procurement debarment rosters.",
+        description="Cross-check bidder against CPPP/SmartBid debarment lists, central vigilance database, and state procurement debarment rosters.",
         is_recommended=True
     ),
     StatutoryRequirementTemplate(
@@ -101,7 +101,7 @@ STATUTORY_REQUIREMENTS_CATALOG: List[StatutoryRequirementTemplate] = [
 
 @router.get("/requirements/templates", response_model=List[StatutoryRequirementTemplate])
 def get_statutory_requirements_templates():
-    """Returns standard catalog of GeM statutory and compliance requirements."""
+    """Returns standard catalog of SmartBid statutory and compliance requirements."""
     return STATUTORY_REQUIREMENTS_CATALOG
 
 @router.get("", response_model=TenderListResponse)

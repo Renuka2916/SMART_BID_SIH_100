@@ -1,5 +1,5 @@
 # ==============================================================================
-# GeM Bid Compliance Platform - Frontend UI Service Dockerfile
+# SmartBid Verification - Frontend UI Service Dockerfile
 # Smart India Hackathon (SIH PS100)
 # ==============================================================================
 

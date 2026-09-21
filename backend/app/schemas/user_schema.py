@@ -11,7 +11,7 @@ class RoleResponse(BaseModel):
 class UserBase(BaseModel):
     email: EmailStr
     full_name: str
-    department: Optional[str] = "GeM Procurement Division"
+    department: Optional[str] = "SmartBid Procurement Division"
 
 class UserCreate(UserBase):
     password: str

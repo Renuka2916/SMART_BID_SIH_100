@@ -83,7 +83,7 @@ class ComplianceEngine:
         tender_dict = {
             "id": tender.id if tender else 0,
             "tender_ref": tender.tender_ref if tender else "N/A",
-            "title": tender.title if tender else "GeM Procurement",
+            "title": tender.title if tender else "SmartBid Procurement",
             "category": tender.category if tender else "Goods",
             "estimated_value": tender.estimated_value if tender else 0.0,
             "mandatory_requirements": tender.mandatory_requirements if tender else ["GST", "PAN", "NON_BLACKLIST"]

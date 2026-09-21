@@ -141,8 +141,8 @@ const ComparisonTable = ({
       docSource: 'Affidavit of Non-Debarment',
       portalValue: isNetSecure 
         ? 'OBSERVATION: Historical entry on State Procurement Watchlist (2024 notice delay). CPPP National: Clear.' 
-        : 'CLEARED: 0 matches on CPPP Debarment, GeM Watchlist & CVC Vigilance',
-      portalSource: 'CPPP Debarment & GeM Registry',
+        : 'CLEARED: 0 matches on CPPP Debarment, SmartBid Watchlist & CVC Vigilance',
+      portalSource: 'CPPP Debarment & SmartBid Registry',
       status: isNetSecure ? 'FLAGGED' : 'VERIFIED',
       discrepancy: isNetSecure ? 'Historical state-level watch flag requires procurement officer scrutiny before award.' : null
     },

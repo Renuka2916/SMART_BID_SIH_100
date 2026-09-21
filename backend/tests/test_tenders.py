@@ -12,7 +12,7 @@ client = TestClient(app)
 def officer_token():
     resp = client.post(
         "/api/auth/login",
-        json={"email": "officer@gem.gov.in", "password": "GeM@2026!Officer"}
+        json={"email": "officer@smartbid.gov.in", "password": "SmartBid@2026!Officer"}
     )
     assert resp.status_code == 200
     return resp.json()["access_token"]
@@ -62,7 +62,7 @@ def test_tender_search_and_filter(officer_token):
 def test_tender_crud_lifecycle_as_procurement_officer(officer_token):
     now = datetime.now(timezone.utc)
     tender_payload = {
-        "tender_ref": f"GEM/2026/TEST/{int(now.timestamp())}",
+        "tender_ref": f"SMARTBID/2026/TEST/{int(now.timestamp())}",
         "title": "Automated Testing Tender For Verification System",
         "description": "Integration test tender creation for compliance engine validation.",
         "category": "Goods",
@@ -128,7 +128,7 @@ def test_tender_crud_lifecycle_as_procurement_officer(officer_token):
 def test_published_and_closed_tender_lifecycle_rules(officer_token):
     now = datetime.now(timezone.utc)
     tender_payload = {
-        "tender_ref": f"GEM/2026/PUB/{int(now.timestamp())}",
+        "tender_ref": f"SMARTBID/2026/PUB/{int(now.timestamp())}",
         "title": "Published Tender Frozen Test",
         "category": "Goods",
         "estimated_value": 500000.0,
@@ -192,7 +192,7 @@ def test_published_and_closed_tender_lifecycle_rules(officer_token):
 def test_rbac_bidder_cannot_create_tender(bidder_token):
     now = datetime.now(timezone.utc)
     tender_payload = {
-        "tender_ref": "GEM/UNAUTHORIZED/001",
+        "tender_ref": "SMARTBID/UNAUTHORIZED/001",
         "title": "Unauthorized Bidder Tender Attempt",
         "category": "Goods",
         "estimated_value": 500000.0,

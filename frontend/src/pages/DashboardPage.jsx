@@ -70,13 +70,13 @@ const DashboardPage = () => {
         <div className="relative z-10 max-w-3xl space-y-3">
           <div className="inline-flex items-center gap-2 bg-blue-800/60 border border-blue-700/60 px-3 py-1 rounded-full text-xs font-semibold text-blue-200">
             <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
-            <span>GeM PS100 • Automated Verification Platform</span>
+            <span>SmartBid PS100 • Automated Verification Platform</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
             Welcome back, {user?.full_name || 'Procurement Officer'}
           </h2>
           <p className="text-sm text-blue-100/80 leading-relaxed">
-            Centralized decision-support hub for GeM procurement. Multi-portal integration 
+            Centralized decision-support hub for SmartBid procurement. Multi-portal integration 
             with <strong>Udyam, GSTN, PAN, EPFO, ESIC, and DigiLocker</strong> empowers you to screen bidders, 
             detect discrepancies, and verify compliance with 60–80% reduced effort.
           </p>

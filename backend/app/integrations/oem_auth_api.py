@@ -13,7 +13,7 @@ class OemAuthFetcher(BasePortalFetcher):
     portal_id = "OEM_AUTH"
     portal_name = "OEM Manufacturer Authorization Registry"
     category = "Technical Eligibility"
-    api_endpoint = "https://oem-verify.gem.gov.in/api/v1/maf"
+    api_endpoint = "https://oem-verify.smartbid.gov.in/api/v1/maf"
 
     async def fetch_data(self, identifiers: BidderIdentifiers) -> NormalizedPortalResponse:
         start_t = time.time()

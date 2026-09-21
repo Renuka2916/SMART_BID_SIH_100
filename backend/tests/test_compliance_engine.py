@@ -45,7 +45,7 @@ def db_session():
 def officer_token():
     resp = client.post(
         "/api/auth/login",
-        json={"email": "officer@gem.gov.in", "password": "GeM@2026!Officer"}
+        json={"email": "officer@smartbid.gov.in", "password": "SmartBid@2026!Officer"}
     )
     assert resp.status_code == 200
     return resp.json()["access_token"]

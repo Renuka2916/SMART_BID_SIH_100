@@ -7,7 +7,7 @@ class Tender(Base):
     __tablename__ = "tenders"
 
     id = Column(Integer, primary_key=True, index=True)
-    tender_ref = Column(String(100), unique=True, index=True, nullable=False) # e.g. "GEM/2026/B/892011"
+    tender_ref = Column(String(100), unique=True, index=True, nullable=False) # e.g. "SMARTBID/2026/B/892011"
     title = Column(String(255), nullable=False)
     description = Column(Text, nullable=True)
     category = Column(String(50), default="Goods", nullable=False) # Goods, Services, Works

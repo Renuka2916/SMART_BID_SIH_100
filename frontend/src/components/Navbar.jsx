@@ -7,12 +7,12 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-30 bg-white border-b border-slate-200 shadow-sm">
-      {/* Top Gov/GeM Bar */}
+      {/* Top Gov/SmartBid Bar */}
       <div className="bg-slate-900 text-slate-300 text-[11px] px-4 sm:px-6 py-1 flex items-center justify-between border-b border-slate-800">
         <div className="flex items-center gap-3">
           <span className="font-semibold text-amber-400 tracking-wide flex items-center gap-1.5">
             <ShieldCheck className="w-3.5 h-3.5" />
-            GOVERNMENT OF INDIA • GeM PORTAL
+            GOVERNMENT OF INDIA • SmartBid PORTAL
           </span>
           <span className="hidden md:inline text-slate-500">|</span>
           <span className="hidden md:inline text-slate-400">
@@ -32,12 +32,12 @@ const Navbar = () => {
         {/* Brand */}
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-lg bg-blue-900 flex items-center justify-center text-white font-black text-xl shadow-md tracking-tighter">
-            GeM
+            SB
           </div>
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-base font-extrabold text-slate-900 tracking-tight leading-none">
-                Integrated Bid Compliance Platform
+                SmartBid Verification
               </h1>
               <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-blue-100 text-blue-800 border border-blue-200">
                 v1.0 (PS100)
@@ -65,7 +65,7 @@ const Navbar = () => {
                   </span>
                 </div>
                 <div className="text-[11px] text-slate-500 max-w-[200px] truncate">
-                  {user.department || 'GeM Procurement Cell'}
+                  {user.department || 'SmartBid Procurement Cell'}
                 </div>
               </div>
 

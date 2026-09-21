@@ -19,7 +19,7 @@ def record_audit_log(
     Creates an immutable, append-only audit log entry recording state changes or operational events.
     """
     user_id = user.id if user else None
-    user_email = user.email if user else "system@gem.gov.in"
+    user_email = user.email if user else "system@smartbid.gov.in"
     user_role = user.role.name if (user and user.role) else "System"
 
     log_entry = AuditLog(

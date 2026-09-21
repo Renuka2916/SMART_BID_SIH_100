@@ -219,7 +219,7 @@ Status : SUSPENDED`
       await fetchSelectedBidderDetails(selectedBidderId);
     } catch (err) {
       console.error('Failed to run AI statutory evaluation:', err);
-      alert('Error running AI statutory verification: ' + (err.response?.data?.detail || err.message));
+      // alert('Error running AI statutory verification: ' + (err.response?.data?.detail || err.message));
     } finally {
       setEvaluating(false);
     }
@@ -360,7 +360,7 @@ Status : SUSPENDED`
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] gap-3 text-slate-500">
         <div className="w-8 h-8 border-3 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-        <p className="text-xs font-mono">Initializing GeM Verification Workspace & Documents...</p>
+        <p className="text-xs font-mono">Initializing SmartBid Verification Workspace & Documents...</p>
       </div>
     );
   }

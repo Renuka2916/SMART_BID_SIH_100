@@ -5,8 +5,8 @@ import { ShieldCheck, Lock, Mail, AlertCircle, ArrowRight, CheckCircle2, Buildin
 import Button from '../components/ui/Button';
 
 const LoginPage = () => {
-  const [email, setEmail] = useState('officer@gem.gov.in');
-  const [password, setPassword] = useState('GeM@2026!Officer');
+  const [email, setEmail] = useState('officer@smartbid.gov.in');
+  const [password, setPassword] = useState('SmartBid@2026!Officer');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -53,15 +53,15 @@ const LoginPage = () => {
       {/* Top Banner */}
       <header className="p-4 sm:p-6 flex items-center justify-between border-b border-slate-800/80 bg-slate-900/40 backdrop-blur-md relative z-10">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg">
-            GeM
+          <div className="h-10 px-3 w-auto rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg">
+            SmartBid
           </div>
           <div>
             <h1 className="text-sm font-bold text-white tracking-wide">
-              GOVERNMENT e-MARKETPLACE (GeM)
+              GOVERNMENT e-MARKETPLACE (SmartBid)
             </h1>
             <p className="text-[11px] text-slate-400">
-              Integrated Bid Compliance Verification Platform • SIH PS100
+              SmartBid Verification Platform • SIH PS100
             </p>
           </div>
         </div>
@@ -115,7 +115,7 @@ const LoginPage = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="officer@gem.gov.in"
+                  placeholder="officer@smartbid.gov.in"
                   className="w-full pl-9 pr-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-800 focus:border-blue-800 transition-all"
                 />
               </div>
@@ -157,14 +157,14 @@ const LoginPage = () => {
               <button
                 type="button"
                 disabled={loading}
-                onClick={() => handleQuickLogin('officer@gem.gov.in', 'GeM@2026!Officer')}
+                onClick={() => handleQuickLogin('officer@smartbid.gov.in', 'SmartBid@2026!Officer')}
                 className="p-2.5 bg-amber-50/80 hover:bg-amber-100 border border-amber-300 rounded-lg text-left transition-all hover:shadow-sm group disabled:opacity-60"
               >
                 <div className="text-[11px] font-bold text-amber-900 flex items-center justify-between">
                   <span>Procurement Officer</span>
                   <Sparkles className="w-3.5 h-3.5 text-amber-600 group-hover:scale-110 transition-transform" />
                 </div>
-                <div className="text-[10px] text-amber-700 truncate mt-0.5">officer@gem.gov.in</div>
+                <div className="text-[10px] text-amber-700 truncate mt-0.5">officer@smartbid.gov.in</div>
                 <div className="text-[9px] text-amber-700/90 font-medium mt-1">Click to sign in instantly →</div>
               </button>
 
@@ -188,7 +188,7 @@ const LoginPage = () => {
 
       {/* Footer */}
       <footer className="p-4 text-center text-xs text-slate-500 border-t border-slate-800/80 bg-slate-900/40 relative z-10">
-        Smart India Hackathon 2026 • AI-Powered Integrated Bid Compliance Verification Platform (PS100)
+        Smart India Hackathon 2026 • AI-Powered SmartBid Verification Platform (PS100)
       </footer>
     </div>
   );

@@ -145,8 +145,8 @@ const TendersPage = () => {
 
   // Open Create Modal
   const openCreateModal = () => {
-    // Generate an automatic GeM Ref format
-    const autoRef = `GEM/2026/B/${Math.floor(1000000 + Math.random() * 9000000)}`;
+    // Generate an automatic SmartBid Ref format
+    const autoRef = `SMARTBID/2026/B/${Math.floor(1000000 + Math.random() * 9000000)}`;
     setFormData({
       ...initialFormState,
       tender_ref: autoRef,
@@ -570,7 +570,7 @@ const TendersPage = () => {
       <Modal
         isOpen={isCreateOpen}
         onClose={() => setIsCreateOpen(false)}
-        title="Create New GeM Procurement Tender"
+        title="Create New SmartBid Procurement Tender"
         subtitle="Specify tender metadata and select mandatory statutory compliance checks"
         maxWidth="max-w-4xl"
         footer={
@@ -616,7 +616,7 @@ const TendersPage = () => {
                   required
                   value={formData.tender_ref}
                   onChange={(e) => setFormData({ ...formData, tender_ref: e.target.value })}
-                  placeholder="GEM/2026/B/892011"
+                  placeholder="SMARTBID/2026/B/892011"
                   className="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg font-mono focus:ring-2 focus:ring-blue-800"
                 />
               </div>

@@ -31,7 +31,7 @@ STATUTORY_RULES_CATALOG: Dict[str, Dict[str, Any]] = {
         "description": "Verifies 10-character PAN authenticity, operative status, Aadhaar linkage, and ITR compliance."
     },
     "NON_BLACKLIST": {
-        "rule_name": "CPPP Debarment & GeM Watchlist Clearance",
+        "rule_name": "CPPP Debarment & SmartBid Watchlist Clearance",
         "portal_name": "CPPP_DEBARMENT",
         "category": "Integrity",
         "default_weight": 20.0,
@@ -103,12 +103,12 @@ STATUTORY_RULES_CATALOG: Dict[str, Dict[str, Any]] = {
         "description": "Verifies DPIIT startup recognition for prior experience and turnover exemptions."
     },
     "GEM_INCIDENTS": {
-        "rule_name": "GeM Marketplace Past Incident History",
+        "rule_name": "SmartBid Marketplace Past Incident History",
         "portal_name": "GEM_INCIDENTS",
         "category": "Integrity",
         "default_weight": 10.0,
         "is_mandatory": False,
-        "description": "Checks seller incident rating, SLA breaches, and past arbitration records on GeM."
+        "description": "Checks seller incident rating, SLA breaches, and past arbitration records on SmartBid."
     }
 }
 
@@ -256,7 +256,7 @@ class ComplianceRuleEngine:
                 if is_blacklisted and vigilance != "REVIEW_REQUIRED":
                     status = "FAILED"
                     score_awarded = 0.0
-                    discrepancy_notes = "Entity is actively debarred/blacklisted on CPPP or GeM Watchlist."
+                    discrepancy_notes = "Entity is actively debarred/blacklisted on CPPP or SmartBid Watchlist."
                 elif is_blacklisted or vigilance == "REVIEW_REQUIRED":
                     status = "FLAGGED"
                     score_awarded = round(weight * 0.5, 2)
