@@ -33,6 +33,7 @@ jobs:
       - name: Run Backend Pytest Suite
         run: |
           cd backend
+          python seed.py
           pytest tests -v
 
   frontend-build:
