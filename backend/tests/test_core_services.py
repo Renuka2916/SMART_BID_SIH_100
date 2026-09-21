@@ -146,6 +146,13 @@ def test_duplicate_bidder_pan_rejection(officer_token, db_session):
     assert tender is not None
 
     duplicate_pan = "KLMNP5432R"
+    
+    # Ensure clean state
+    existing = db_session.query(Bidder).filter(Bidder.pan_masked == mask_pan(duplicate_pan)).all()
+    for b in existing:
+        db_session.delete(b)
+    db_session.commit()
+
     payload = {
         "company_name": "Zenith Subsidiary Corp",
         "pan": duplicate_pan,
@@ -153,14 +160,22 @@ def test_duplicate_bidder_pan_rejection(officer_token, db_session):
         "contact_email": "other@zenithsystems.in"
     }
 
-    resp = client.post(
+    # First submission should succeed
+    resp1 = client.post(
         f"/api/tenders/{tender.id}/bidders",
         json=payload,
         headers={"Authorization": f"Bearer {officer_token}"}
     )
-    # Should be rejected as duplicate submission
-    assert resp.status_code == 400
-    assert "has already submitted a bid" in resp.json()["detail"]
+    assert resp1.status_code == 201
+
+    # Second submission should be rejected as duplicate
+    resp2 = client.post(
+        f"/api/tenders/{tender.id}/bidders",
+        json=payload,
+        headers={"Authorization": f"Bearer {officer_token}"}
+    )
+    assert resp2.status_code == 400
+    assert "has already submitted a bid" in resp2.json()["detail"]
 
 # ==============================================================================
 # 3. Document Lifecycle & SHA-256 Hash Tests
