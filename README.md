@@ -52,6 +52,7 @@ Anchored in **AI Document Intelligence** and direct **Government API integration
 | **Risk Assessment** | **Subjective**<br>(Dependent entirely on the evaluating officer's individual scrutiny) | **Financial / Cost Focused**<br>(ERPs focus on credit; Bidding tools on cost. Neither provides statutory AI risk scoring) | **Dynamic Risk Engine**<br>(Automated LOW/MEDIUM/HIGH classification with AI recommendations) |
 | **Accountability & Audit** | **Basic Application Logs**<br>(Standard server logs that can be altered or lost) | **Standard Database Logs**<br>(Proprietary logs; lacks cryptographic assurance) | **Tamper-Proof Audit Trail**<br>(Append-only SHA-256 chain hashes for legal non-repudiation) |
 
+---
 
 ## 💡 Key Differentiators: What Makes SmartBid Revolutionary?
 
@@ -77,7 +78,7 @@ Anchored in **AI Document Intelligence** and direct **Government API integration
 
 ## 🏗️ Repository Structure
 
-`	ext
+```text
 PS100_SIH/
 ├── backend/
 │   ├── app/
@@ -95,7 +96,7 @@ PS100_SIH/
 │   │   └── services/         # Axios API clients
 │   └── package.json          # Dependencies (React 18, Tailwind CSS)
 └── docker-compose.yml        # Full-stack container orchestration
-`
+```
 
 ---
 
@@ -107,7 +108,7 @@ PS100_SIH/
 
 ### Step 1: Backend Setup
 
-`ash
+```bash
 # Navigate to backend directory
 cd backend
 
@@ -126,12 +127,12 @@ python seed.py
 
 # Start FastAPI server
 uvicorn main:app --host 127.0.0.1 --port 8000 --reload
-`
-- **Backend API URL**: http://127.0.0.1:8000
+```
+- **Backend API URL**: `http://127.0.0.1:8000`
 
 ### Step 2: Frontend Setup
 
-`ash
+```bash
 # Navigate to frontend directory
 cd ../frontend
 
@@ -140,5 +141,5 @@ npm install
 
 # Start development server
 npm run dev
-`
-- **Application URL**: http://localhost:5173
+```
+- **Application URL**: `http://localhost:5173`
