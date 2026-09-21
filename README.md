@@ -78,25 +78,37 @@ Anchored in **AI Document Intelligence** and direct **Government API integration
 
 ## 🏗️ Repository Structure
 
-```text
+`	ext
 PS100_SIH/
 ├── backend/
 │   ├── app/
-│   │   ├── ai/               # OCR pipeline, NLP extractor, signature/stamp verifier
-│   │   ├── api/              # FastAPI REST routers
-│   │   ├── compliance/       # Rule engine, scoring module, cross verifier
-│   │   ├── models/           # SQLAlchemy ORM models
-│   │   └── security/         # AES-256-GCM encryption, circuit breaker
-│   ├── tests/                # Automated pytest suite
-│   ├── main.py               # FastAPI application entrypoint
-│   └── seed.py               # Pre-seeded tenders, bidders, and credentials
+│   │   ├── ai/                # Computer vision & OCR pipeline, signature/stamp extraction
+│   │   ├── api/               # FastAPI REST routers (tenders, bidders, compliance, audit)
+│   │   ├── compliance/        # Rule engine, multi-portal cross verification, scoring module
+│   │   ├── database.py        # SQLAlchemy 2.0 engine & SQLite connection logic
+│   │   ├── models/            # SQLAlchemy ORM models (AuditLog, Bidder, Tender, Document)
+│   │   ├── security/          # AES-256-GCM encryption, circuit breakers, retry managers
+│   │   ├── services/          # Core logic (AI, audit, bidder, and document services)
+│   │   ├── utils/             # API clients, response normalizers, cryptographic helpers
+│   │   └── workflow/          # AI Safety Gate & GFR 173 decision controllers
+│   ├── tests/                 # Automated pytest suites (Core services, integrations, auth)
+│   ├── seed.py                # Development seeder (Mock Tenders, Bidders, encrypted PII)
+│   └── main.py                # FastAPI initialization & application entrypoint
 ├── frontend/
+│   ├── public/                # Static assets, branding, and icons
 │   ├── src/
-│   │   ├── components/       # UI components (VerificationWorkspace, Dashboard)
-│   │   └── services/         # Axios API clients
-│   └── package.json          # Dependencies (React 18, Tailwind CSS)
-└── docker-compose.yml        # Full-stack container orchestration
-```
+│   │   ├── components/        # Reusable UI (VerificationWorkspace, Navbar, Sidebar)
+│   │   ├── context/           # React contexts (AuthContext for role-based access)
+│   │   ├── pages/             # App views (ActiveBids, Dashboard, Tenders, Verification)
+│   │   ├── services/          # Axios API wrapper (api.js) for backend communication
+│   │   ├── App.jsx            # Main React component tree and router setup
+│   │   ├── index.css          # Global Tailwind CSS configurations
+│   │   └── main.jsx           # React DOM rendering entrypoint
+│   ├── package.json           # Frontend dependencies (React, Tailwind, Axios)
+│   └── tailwind.config.js     # Tailwind utility class configurations
+├── docker-compose.yml         # Full-stack container orchestration for isolated deployment
+└── README.md                  # Project overview, architecture, and instructions
+`
 
 ---
 
