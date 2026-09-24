@@ -1,9 +1,10 @@
 # AI-Powered SmartBid Verification
 
-> **Automating Compliance. Ensuring Transparency. Accelerating Procurement.**  
+> **Automating Compliance. Ensuring Transparency. Accelerating Procurement.**
 > *AI-Driven Statutory Compliance Verification and Risk Assessment Platform for GeM*
 
 ---
+*Note:* The GitHub project linked above are currently *55-65% completed* and are still under active development.
 
 ### 🇮🇳 Smart India Hackathon (SIH 2026) Submission Details
 
